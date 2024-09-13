@@ -1,0 +1,180 @@
+
+body{
+    background-color:#35524a9f;
+}
+
+img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+/*navbar*/
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 0 !important;
+    background-color: #333;
+    padding: 10px 20px;
+    
+  }
+  
+  .logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 0 !important;
+  }
+  
+  .menu {
+    list-style: none;
+    display: flex;
+    margin-left: 0 auto;
+    
+  }
+  
+  .menu li {
+    margin-left: 20px;
+  }
+  
+  .menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+  }
+  
+  .menu li a:hover {
+        color: lightcoral;
+  }
+  
+  .menu-toggle {
+    display: none;
+  }
+  
+  
+  .hamburger-icon {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .menu {
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background-color: #333;
+      display: none;
+    }
+  
+    .menu li {
+      margin: 10px 0;
+    }
+  
+    .hamburger-icon {
+      display: block;
+    }
+  
+    .menu-toggle:checked + .hamburger-icon + .menu {
+      display: flex;
+    }
+   
+  }
+  
+
+/*fim navbar*/
+
+/* começo do body*/
+
+.container{
+  
+  width: 60%;
+  margin-left: 20vw;
+  margin-top: 20vh;
+  
+}
+
+.panel-default{
+    background-color: rgba(211, 211, 211, 0.63);
+}
+
+#head{
+    background-color: lightgray;
+}
+
+h2{
+    text-align: center;
+}
+
+  
+.question {
+    border: 3px solid #ccc;
+    padding: 10px 0;
+    background-color:rgba(211, 211, 211, 0.63);
+    border-radius: 5px;
+    margin-bottom: 15px;
+    position: relative;
+
+  }
+  
+.question input,
+.question .answer { display: none }
+  
+.question label {
+    display: inline-flex;
+    font-weight: bold;
+    margin-bottom: 10px;
+    width: 100%
+  }
+  
+.question input:checked ~ .answer {
+    display: block
+  }
+
+
+  #box-qto {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    cursor: pointer;
+    padding-right: 10px; 
+  }
+  
+  .arrow {
+    display: inline-block;
+    content: "";
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    padding: 6px;
+    transform: rotate(45deg); 
+    transition: transform 0.3s ease;
+    margin-left: auto;
+    margin-right: 3%; 
+  }
+  
+  
+  .answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+  
+  
+  input[type='checkbox']:checked ~ .answer {
+    max-height: 250px; 
+  }
+  
+  
+  input[type='checkbox']:checked + label .arrow {
+    transform: rotate(-135deg); 
+  }
+  
+  
